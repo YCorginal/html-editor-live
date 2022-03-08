@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>HTML EDITOR</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+    <script type="text/javascript">
+    	//Created By Yours Cartoons
+    	function system(){
+    		       var textContent = document.getElementById('Editor').value; document.getElementById('viewport').srcdoc = textContent;      
+    	                 }    
+    </script>
+    <style type="text/css">
+    	/*Make A Easy HTML Editor With One Line Of Js*/
+    	/*Google Font Link*/
+    	@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Teko:wght@300&display=swap');
+        /*Don't Edit Margin and Padding*/
+         *{
+         	margin: 0;
+         	padding: 0;
+          box-sizing: border-box;
+         } 
+         body{
+         	font-family: 'Teko';
+         	text-decoration: none;
+         	overflow-x: hidden;
+         }
+         .h1{
+         	margin-top: 0em;
+         	width: 100%;
+         	height: 40px
+         	color: black;
+         	font-family: sans-serif;
+         	text-align: center;
+         	background-color: #00fa9a;
+            cursor: not-allowed;
+         }
+         .h1 a{
+         	font-size: 33px;
+         	color: red;
+            font-family: cursive;
+            text-decoration: none;
+         }
+         .active a{
+         	color: red;
+         }
+         ul{
+             float: right;
+             list-style-type: none;
+             margin-top: 0px;
+         }
+         ul li{
+            display:inline-block; 
+             }
+         ul li a{
+             text-decoration: none;
+             color:#fff;
+             padding:5px 20px ;
+             border:1px solid transparent;
+             transition:0.6s ease-in-out;
+             font-size: 30px; 
+            }
+         ul li a:hover{
+             background-color: white;
+             color: black;
+            }
+         #Editor{
+            width: 100%;
+            height: 20em;
+            margin: 0px;
+            padding: 0px;
+            background: black;
+            color: #fefefe;
+            font-size: 20px
+          }
+         #viewport{
+            background: white;
+            width: 100%;
+            height: 30em;
+            margin: 0px;
+            border: 1px solid #3498db;
+         }
+        .class{
+            width: 100%
+            height: 100em;
+            background-color: black;
+        }
+        footer summary{
+            color: white;
+        }
+        .container{
+           max-width: 1170px;
+                   margin:auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style: none;
+        }
+        .footer{      
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+        .footer-col{
+           width: 25%;
+           padding: 0 15px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+}        
+        .footer-col ul li a:hover{
+            color: black;
+            padding-left: 8px;
+        }
+      .footer-col .social-links a{
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          background-color: rgba(255,255,255,0.2);
+          margin:0 10px 10px 0;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 50%;
+          color: #ffffff;
+          transition: all 0.5s ease;
+      }
+      .footer-col .social-links a:hover{
+          color: #24262b;
+          background-color: #ffffff;
+      }
+    </style>
+
+</head>
+<body>
+		<nav>
+		<ul>
+			<li class="active"><a href="#"><i class="fas fa-home"></i></a></li>
+			<li><a href="#"><i class="fas fa-book-open"></i></a></li>
+			<li><a href="#"><i class="fas fa-award"></i></i></a></li>
+			<li><a href="#"><i class="fas fa-broom"></i></i></a></li>
+			<li><a href="#"><i class="fas fa-code"></i></i></a></li>
+			<li><a href="#"><i class="far fa-paper-plane"></i></i></a></li>
+		</ul>
+	</nav>
+	 
+	<h1 class="h1"> <a href="https://www.youtube.com/channel/UCChcoctfCg1GbPccH9nTWlw/f">Yours Cartoons</a></h1>
+	
+	
+  <!-- Place The Basic Html Structure In Text Area.Note:Also Use Id -->
+ <textarea id="Editor" onkeyup="system()">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html></textarea>
+    
+  <!-- Use iframe teg to display.Note:Also Use Id -->
+  <iframe id="viewport"></iframe>
+
+  <!-- For Font We Will Use teko-->
+  <footer class="footer">
+     <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Your Ideas</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Supporters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online Web Creator</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">Like Us</a></li>
+                    <li><a href="#">example</a></li>
+                    <li><a href="#">None</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+     </div>
+  </footer>
+</body>
+</html>
